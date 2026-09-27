@@ -1,0 +1,10 @@
+ paths:
+  input_file: "data/bronze/datos_ventas.xlsx"
+  output_file: "data/gold/resumen_ventas.xlsx"
+
+processing:
+  year: 2023
+
+sheets:
+  seller_summary: "Resumen_Ventas"
+  monthly_summary: "Ventas_Mensuales"
