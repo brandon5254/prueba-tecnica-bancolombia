@@ -1,5 +1,4 @@
 import yaml
-import pandas as pd
 
 from src.extract.extract_excel import extract_excel
 from src.transform.transform_sales import (

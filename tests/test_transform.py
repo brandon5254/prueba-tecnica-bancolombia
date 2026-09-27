@@ -37,3 +37,18 @@ def test_sales_summaries():
 
     assert sellers["Total_Venta"].sum() == 600
     assert months["Total_Venta"].sum() == 600
+
+def test_existing_total_is_not_modified():
+    data = pd.DataFrame({
+        "ID_Venta": [1],
+        "Fecha": ["2023-03-10"],
+        "Producto": ["Producto A"],
+        "Cantidad": [2],
+        "Precio_Unitario": [100],
+        "Total_Venta": [500],
+        "Vendedor": ["Ana"]
+    })
+
+    result = transform_sales(data, 2023)
+
+    assert result.iloc[0]["Total_Venta"] == 500
